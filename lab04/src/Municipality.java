@@ -2,23 +2,29 @@ package mountainhuts;
 
 /**
  * Class representing a municipality that hosts a mountain hut.
- * It is a data class with getters for name, province, and altitude
- * 
+ * It is a data class with getters for name, province, and altitude.
  */
 public class Municipality {
-	public Municipality(String name, String province, Integer altitude) {
-	}
 
-	public String getName() {
-		return null;
-	}
+    private final String name;
+    private final String province;
+    private final Integer altitude;
 
-	public String getProvince() {
-		return null;
-	}
+    public Municipality(String name, String province, Integer altitude) {
+        this.name = name;
+        this.province = province;
+        this.altitude = altitude;
+    }
 
-	public Integer getAltitude() {
-		return null;
-	}
+    public String getName() {
+        return name;
+    }
 
+    public String getProvince() {
+        return province;
+    }
+
+    public Integer getAltitude() {
+        return altitude;
+    }
 }
