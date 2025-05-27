@@ -16,6 +16,16 @@ public class MountainHut {
     private Integer bedsNumber;
     private Municipality municipality;
 
+    /**
+     * Constructor with altitude as Optional<Integer>.
+     * Null value for altitude will be converted to Optional.empty().
+     * 
+     * @param name         the name of the hut
+     * @param altitude     optional altitude of the hut
+     * @param category     category of the hut
+     * @param bedsNumber   number of beds
+     * @param municipality municipality where the hut is located
+     */
     public MountainHut(String name, Optional<Integer> altitude, String category,
                        Integer bedsNumber, Municipality municipality) {
         this.name = name;
@@ -23,6 +33,21 @@ public class MountainHut {
         this.category = category;
         this.bedsNumber = bedsNumber;
         this.municipality = municipality;
+    }
+
+    /**
+     * Alternative constructor with altitude as Integer (nullable).
+     * Converts altitude to Optional internally.
+     * 
+     * @param name         the name of the hut
+     * @param altitude     altitude of the hut or null if unknown
+     * @param category     category of the hut
+     * @param bedsNumber   number of beds
+     * @param municipality municipality where the hut is located
+     */
+    public MountainHut(String name, Integer altitude, String category,
+                       Integer bedsNumber, Municipality municipality) {
+        this(name, Optional.ofNullable(altitude), category, bedsNumber, municipality);
     }
 
     public String getName() {
