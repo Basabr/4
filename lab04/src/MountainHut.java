@@ -7,49 +7,62 @@ import java.util.Optional;
  * 
  * It includes a name, optional altitude, category,
  * number of beds and location municipality.
- *  
- *
  */
 public class MountainHut {
 
-	/**
-	 * Retrieves the name of the hut
-	 * @return name of the hut
-	 */
-	public String getName() {
-		return null;
-	}
+    private final String name;
+    private final Optional<Integer> altitude;
+    private final String category;
+    private final Integer bedsNumber;
+    private final Municipality municipality;
 
-	/**
-	 * Retrieves altituted if available
-	 * 
-	 * @return optional hut altitude
-	 */
-	public Optional<Integer> getAltitude() {
-		return Optional.empty();
-	}
+    public MountainHut(String name, Optional<Integer> altitude, String category,
+                       Integer bedsNumber, Municipality municipality) {
+        this.name = name;
+        this.altitude = altitude;
+        this.category = category;
+        this.bedsNumber = bedsNumber;
+        this.municipality = municipality;
+    }
 
-	/**
-	 * Retrieves the category of the hut
-	 * @return hut category
-	 */
-	public String getCategory() {
-		return null;
-	}
+    /**
+     * Retrieves the name of the hut
+     * @return name of the hut
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * Retrieves the number of beds available in the hut
-	 * @return number of beds
-	 */
-	public Integer getBedsNumber() {
-		return null;
-	}
+    /**
+     * Retrieves altitude if available
+     * 
+     * @return optional hut altitude
+     */
+    public Optional<Integer> getAltitude() {
+        return altitude;
+    }
 
-	/**
-	 * Retrieves the municipality of the hut
-	 * @return hut municipality
-	 */
-	public Municipality getMunicipality() {
-		return null;
-	}
+    /**
+     * Retrieves the category of the hut
+     * @return hut category
+     */
+    public String getCategory() {
+        return category;
+    }
+
+    /**
+     * Retrieves the number of beds available in the hut
+     * @return number of beds
+     */
+    public Integer getBedsNumber() {
+        return bedsNumber;
+    }
+
+    /**
+     * Retrieves the municipality of the hut
+     * @return hut municipality
+     */
+    public Municipality getMunicipality() {
+        return municipality;
+    }
 }
